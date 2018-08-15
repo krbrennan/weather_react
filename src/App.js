@@ -13,7 +13,8 @@ class App extends Component {
       searchField: '',
       lat: 0,
       long: 0,
-      searched: false
+      searched: true,
+      calls: 0
     };
     this.handler = this.handler.bind(this)
     // this.getCoords = this.getCoords.bind(this)
@@ -54,14 +55,15 @@ async componentDidUpdate(){
       //   this.setState({searched: false})
       // }
 
-    if(this.state.lat !== 0 && searched == true){
+    if(this.state.lat !== 0 && this.state.searched == true){
       const proxy = `https://cors-anywhere.herokuapp.com/`
       const url = `https://api.darksky.net/forecast/3c36360a47f4cc747e19871230e1ecd8/${this.state.lat},${this.state.long}`
       const darkResponse = await fetch(proxy + url)
       const darkJson = await darkResponse.json()
       this.setState({
         darkSkyData: darkJson,
-        searched: false
+        searched: false,
+        calls: this.state.calls += 1
       });
     }
 }
