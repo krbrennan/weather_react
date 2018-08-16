@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import storm from './storm.png';
+import Cards from './cards/Cards'
 import './App.css';
 
 import SearchBar from './SearchBar';
@@ -55,7 +56,8 @@ async componentDidUpdate(){
       //   this.setState({searched: false})
       // }
 
-    if(this.state.lat !== 0 && this.state.searched == true){
+    //checks to make sure only one api call is made
+    if(this.state.lat !== 0 && this.state.searched === true){
       const proxy = `https://cors-anywhere.herokuapp.com/`
       const url = `https://api.darksky.net/forecast/3c36360a47f4cc747e19871230e1ecd8/${this.state.lat},${this.state.long}`
       const darkResponse = await fetch(proxy + url)
@@ -71,6 +73,8 @@ async componentDidUpdate(){
 
   handler(data){
     // successfully sets state.searchField to zip code
+    // Because i went over API limit by accident I removed the searchBox's
+    // relationship with retreiving data
     this.setState({
       searchField: data,
       searched: true
@@ -87,6 +91,7 @@ async componentDidUpdate(){
           <h1 className="App-title">Weather Essentials</h1>
         </header>
         <SearchBar handlerFromParent={this.handler}/>
+        <Cards props={this.state.darkSkyData} />
       </div>
     );
   }

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  border: 0.5px solid grey;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  margin-top: 2em;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius: 7px;
+  justify-content: center;
+  display: flex;
+
+}
+
+.currently {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.icon {
+  margin: 1em;
+  padding: 1em;
+}
+
+.current-forecast {
+  justify-content: center;
+}
+
+.current-forecast, h2, h4 {
+  padding: .25em;
+}
+
+.weather-img {
+
+}
