@@ -3,7 +3,8 @@ import './today_card.css';
 import IconSelector from '../icons/IconSelector'
 
 const Card = (props) => {
-  // console.log(props)
+  console.log('wubalubadubdub')
+  console.log(props)
 
 
   /* <img className='weather-img' src={require('../icons/png/001-cloud.png')}></img> */
@@ -16,11 +17,12 @@ const Card = (props) => {
         <div className='current-forecast'>
           <h2>{Math.round(props.props.currently.temperature)}˚</h2>
           <h2>{props.props.currently.summary}</h2>
-          <h4> {Math.round(props.props.daily.data[0].temperatureHigh)}˚ /  {Math.round(props.props.daily.data[0].temperatureLow)}˚ </h4>
+          <h4 className='today-temp'> {Math.round(props.props.daily.data[0].temperatureHigh)}˚ /  {Math.round(props.props.daily.data[0].temperatureLow)}˚ </h4>
         </div>
       </div>
-
-
+      <div className='summary'>
+        <span>{ props.props.daily.data[0].summary }</span>
+      </div>
     </div>
   )
 }

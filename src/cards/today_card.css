@@ -3,22 +3,24 @@
   padding: 0;
 }
 .container {
-  border: 0.5px solid grey;
   width: 80%;
   margin: 0 auto;
   padding: 1em;
-  margin-top: 2em;
-  box-shadow: 2px 2px 2px 2px black;
+  margin-top: 1em;
+  /* box-shadow: 2px 2px 2px 2px black; */
   border-radius: 7px;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 
 }
 
 .currently {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   text-align: center;
 }
 
@@ -28,13 +30,26 @@
 }
 
 .current-forecast {
+  margin: 0 auto;
   justify-content: center;
+  text-align: center;
 }
 
 .current-forecast, h2, h4 {
   padding: .25em;
 }
 
+.today-temp {
+  font-weight: 400;
+}
+
 .weather-img {
 
+}
+
+.summary {
+  margin: 0 auto;
+  padding-top: 1em;
+  font-weight: 800;
+  font-size: 2em;
 }
