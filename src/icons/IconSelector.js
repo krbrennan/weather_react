@@ -9,8 +9,11 @@ const Selector = (props) => {
   // get current hour of day (military time)
   let hours = new Date().getHours()
 
+  // console.log(props.props.icon)
+
   const DAYIMGS = {
     "Clear": sunny,
+    "Humid and Partly Cloudy": partlyCloudy,
     "Partly Cloudy": partlyCloudy
   }
 
@@ -18,15 +21,15 @@ const Selector = (props) => {
     "Clear": moon
   }
 
-  let icon = 'eh'
+  let icon = ''
 
-  if((hours > 12) || (hours < 7)) {
-    icon = DAYIMGS[props.props]
+  if((hours >= 12) || (hours <= 7)) {
+    icon = DAYIMGS[props.props.summary]
   } else {
     icon = NIGHTIMGS[props.props]
   }
+
   // returns summary of current weather
-  console.log(props.props)
   return(
       <img className='weather-img' src={icon}></img>
   )

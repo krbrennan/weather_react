@@ -3,7 +3,9 @@ import storm from './storm.png';
 import Cards from './cards/Cards'
 import './App.css';
 
-import SearchBar from './SearchBar';
+import CurrentWeatherData from './current_weather/CurrentWeatherData'
+
+// import SearchBar from './SearchBar';
 
 class App extends Component {
   constructor(props) {
@@ -90,7 +92,8 @@ async componentDidUpdate(){
           <img src={storm} className="App-logo" alt="logo" />
           <h1 className="App-title">Weather Essentials</h1>
         </header>
-        <SearchBar handlerFromParent={this.handler}/>
+        <CurrentWeatherData props={this.state.darkSkyData.currently} />
+        {/* <SearchBar handlerFromParent={this.handler}/> */}
         <Cards props={this.state.darkSkyData} />
       </div>
     );

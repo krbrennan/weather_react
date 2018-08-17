@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './today_card.css';
 import IconSelector from '../icons/IconSelector'
 
 const Card = (props) => {
-  console.log(props)
+  // console.log(props)
 
 
   /* <img className='weather-img' src={require('../icons/png/001-cloud.png')}></img> */
@@ -11,7 +11,7 @@ const Card = (props) => {
     <div className='container'>
       <div className='currently'>
         <div className='icon'>
-          <IconSelector props={props.props.currently.summary} />
+          <IconSelector props={props.props.currently} />
         </div>
         <div className='current-forecast'>
           <h2>{Math.round(props.props.currently.temperature)}˚</h2>
