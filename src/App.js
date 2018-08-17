@@ -4,6 +4,7 @@ import Cards from './cards/Cards'
 import './App.css';
 
 import CurrentWeatherData from './current_weather/CurrentWeatherData'
+import Timeline from './cards/Timeline'
 
 // import SearchBar from './SearchBar';
 
@@ -95,6 +96,7 @@ async componentDidUpdate(){
         <CurrentWeatherData props={this.state.darkSkyData.currently} />
         {/* <SearchBar handlerFromParent={this.handler}/> */}
         <Cards props={this.state.darkSkyData} />
+        <Timeline props={this.state.darkSkyData.hourly} />
       </div>
     );
   }
