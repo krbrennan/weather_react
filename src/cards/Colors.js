@@ -2,8 +2,8 @@ import React from 'react'
 import Timeline from './Timeline'
 
 const Colors = (props) => {
-console.log('colors')
-console.log(props.props.props.data)
+// console.log('colors')
+// console.log(props.props.props.data)
 // console.log(props.props.props.data[0])
 
   let colors = []
@@ -38,7 +38,7 @@ let timeline = document.getElementById('timeline')
 if(timeline !== undefined && colors.length >= 24){
   return(
       colors.map((color) => {
-        console.log(color)
+        // console.log(color)
         return <span style={{backgroundColor: color}}></span>
       })
   )
