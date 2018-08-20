@@ -11,7 +11,7 @@ const Timeline = (props) => {
     if(Object.values(props)[0] !== undefined) {
       // console.log(props.props.data)
       return (
-        <div className='hourly-visual'>
+        <div className='timeline'>
           <div id='timeline' className='timeline-container'>
             <Colors props={props} />
           </div>

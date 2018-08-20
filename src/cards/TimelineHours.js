@@ -13,22 +13,22 @@ if(props.props.props.data !== undefined){
     if(skipHours <= 48) {
       // hours.push(hour.time)
       hours.push(props.props.props.data[skipHours].time)
-      skipHours += 6
+      skipHours += 5
     } else {return}
   })
-  console.log('timelineHours')
-  console.log(hours)
+  // console.log('timelineHours')
+  // console.log(hours)
 
 }
   // console.log(props.props.props.data)
   return(
-    <div className='timeline-hours'>
+    <div className='timeline-display-hours'>
       {hours.map(hour => {
         const time = new Date(hour * 1000).getHours()
-        let future = (time + 5) % 12
-        return <span>
-          {time > 12 ? time - 12 : time}:00
-          --  {future}:00
+        let future = (time + 4) % 12
+        return <span className='timeline-display-hours-span'>
+          {time > 12 ? time - 12 : time}:00  --<br></br>
+          {future}:00
         </span>
       })}
     </div>
