@@ -1,14 +1,17 @@
 import React from 'react'
 import './timeline.css'
+import Colors from './Colors'
 
+/* <Colors props = {props} /> */
 const Timeline = (props) => {
+
   console.log('timeline')
-  const timeline = document.getElementById('timeline')
+  // console.log(props)
     if(Object.values(props)[0] !== undefined) {
       // console.log(props.props.data)
       return (
         <div id='timeline' className='timeline-container'>
-
+          <Colors props={props} />
         </div>
       )
     } else {
@@ -19,10 +22,6 @@ const Timeline = (props) => {
       )
     }
 
-    let span = timeline.createElement(span)
-    {props.props.data.map((hour) => {
-      
-    })}
 }
 
 export default Timeline;

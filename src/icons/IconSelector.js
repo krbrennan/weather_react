@@ -27,12 +27,11 @@ const Selector = (props) => {
 
   let icon = ''
 
-  if((hours >= 12) || (hours <= 7)) {
+  if((hours >= 8) || (hours <= 19)) {
     icon = DAYIMGS[props.props.icon]
   } else {
     icon = NIGHTIMGS[props.props.icon]
   }
-
   // returns summary of current weather
   return(
       <img className='weather-img' src={icon}></img>

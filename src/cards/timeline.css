@@ -2,6 +2,19 @@
   width: 800px;
   margin: 0 auto;
   margin-top: 2em;
-  background: wheat;
+  /* background: wheat; */
   height: 5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline-container span {
+  /* width: 33.33px; */
+  width: 16.32px;
+  height: 100%;
+  border-right: .5px solid black;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0;
+  padding: 0;
 }
