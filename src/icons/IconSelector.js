@@ -3,6 +3,7 @@ import sunny from './png/clear.png';
 import partlyCloudy from './png/partly_cloud.png';
 import rain from './png/rain.png';
 import cloudMoon from './png/night_cloud.png'
+import cloud from './png/cloud.png'
 
 import moon from './png/moon.png';
 
@@ -16,7 +17,8 @@ const Selector = (props) => {
   const DAYIMGS = {
     "clear": sunny,
     "partly-cloudy-day": partlyCloudy,
-    "rain": rain
+    "rain": rain,
+    "cloudy": cloud
   }
 
   const NIGHTIMGS = {

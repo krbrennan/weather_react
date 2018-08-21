@@ -12,6 +12,7 @@ const Timeline = (props) => {
       // console.log(props.props.data)
       return (
         <div className='timeline'>
+          <h2>48 Hour Forecast</h2>
           <div id='timeline' className='timeline-container'>
             <Colors props={props} />
           </div>

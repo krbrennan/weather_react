@@ -1,6 +1,7 @@
 import React from 'react'
 import Timeline from './Timeline'
 
+
 const Colors = (props) => {
 // console.log('colors')
 // console.log(props.props.props.data)

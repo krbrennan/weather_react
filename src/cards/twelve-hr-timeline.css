@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.twelve-timeline {
+  padding: 2em;
+}
+
+
+
+.twelve-timeline-container {
+  max-width: 800px;
+  /* max-width: 100%; */
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 2em;
+  /* background: wheat; */
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.twelve-timeline-hours {
+  max-width: 800px;
+}
+/*
+.twelve-timeline-container > span {
+  width: 33.33px;
+  width: 16.33px;
+  width: 130px;
+  height: 100%;
+  border-right: .5px solid black;
+  margin: 0;
+  padding: 0;
+} */
+
+.twelve-timeline-container span:first-child {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.twelve-timeline-container span:last-child {
+  border-right: 0px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+
+
+/* Hours */
+
+.twelve-hr-hourly-visual {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.twelve-hr-timeline-div {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.twelve-hr-timeline-display-hours {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  height: 3em;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.twelve-timeline-container > span {
+  width: 90%;
+  border-right: .1px solid grey;
+}
+
+.twelve-hr-timeline-display-hours-span {
+  border-right: .5px solid grey;
+  min-width: 66.6px;
+  flex-direction: column;
+}
+
+#twelve-timeline-div {
+  margin: 0 auto;
+  width: 100%;
+}
+#twelve-timeline-div > span {
+  width: 100%;
+}
+
+/* .timeline-display-hours-span:first-of-type {
+  margin-left: 21px;
+} */
+/* .timeline-display-hours-span:nth-child(n) {
+  margin-left: 27px;
+} */
+/* .timeline-display-hours-span:nth-child(3n) {
+  margin-right:17px;
+} */
