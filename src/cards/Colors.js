@@ -6,39 +6,35 @@ const Colors = (props) => {
 // console.log(props.props.props.data)
 // console.log(props.props.props.data[0])
 
+  // let colors = []
   let colors = []
 
 if(props.props.props.data[0] !== undefined) {
   let numHours = 0
   props.props.props.data.map(hour => {
-    // if(numHours < 24) {
       if(hour.icon === 'cloudy'){
           colors.push('#636e72')
-          numHours ++;
       } else if (hour.icon === 'partly-cloudy-day'){
-          colors.push('#b2bec3');
-          numHours ++;
+          colors.push('#b2bec3')
       } else if (hour.icon === 'partly-cloudy-night') {
-          colors.push('#b2bec3');
-          numHours ++;
+          colors.push('#b2bec3')
       } else if (hour.icon === 'rain') {
-          colors.push('#0652DD');
-          numHours ++;
+          colors.push('#0652DD')
       } else if (hour.icon === 'sunny'){
           colors.push('#FFC312')
-          numHours ++;
+      } else if (hour.icon === 'clear-night'){
+        colors.push('#FFC312')
+      } else if (hour.icon === 'clear-day'){
+        colors.push('#FFC312')
       }
-    // }
   })
 }
 
 let timeline = document.getElementById('timeline')
 
-// console.log(colors)
 if(timeline !== undefined && colors.length >= 24){
   return(
       colors.map((color) => {
-        // console.log(color)
         return <span style={{backgroundColor: color}}></span>
       })
   )

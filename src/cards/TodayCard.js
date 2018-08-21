@@ -4,20 +4,20 @@ import IconSelector from '../icons/IconSelector'
 
 const Card = (props) => {
   console.log('wubalubadubdub')
-  console.log(props)
-
 
   /* <img className='weather-img' src={require('../icons/png/001-cloud.png')}></img> */
+  let currently = props.props.currently
+  console.log(currently)
   return(
     <div className='container'>
       <div className='currently'>
         <div className='icon'>
-          <IconSelector props={props.props.currently} />
+          <IconSelector props={currently} />
         </div>
         <div className='current-forecast'>
-          <h2>{Math.round(props.props.currently.temperature)}˚</h2>
-          <h2>{props.props.currently.summary}</h2>
-          <h4 className='today-temp'> {Math.round(props.props.daily.data[0].temperatureHigh)}˚ /  {Math.round(props.props.daily.data[0].temperatureLow)}˚ </h4>
+          <h2>{Math.round(currently.temperature)}˚</h2>
+          <h2>{currently.summary}</h2>
+          {/* <h4 className='today-temp'> {Math.round(props.props.daily.data[0].temperatureHigh)}˚ /  {Math.round(props.props.daily.data[0].temperatureLow)}˚ </h4> */}
         </div>
       </div>
       <div className='summary'>
