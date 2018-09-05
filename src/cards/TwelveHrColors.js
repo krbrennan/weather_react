@@ -48,7 +48,7 @@ if(timeline !== undefined && colors.length < 13){
   )
 } else{
   return(
-    <h3>Loading</h3>
+    <h3></h3>
   )
 }
 

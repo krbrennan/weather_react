@@ -14,7 +14,7 @@ const CurrentWeatherData = (props) => {
           </div>
           <div className='humidity'>
             <span className='current-weather-bold'>Humidity: </span>
-            <span>{ props.props.humidity * 100 }%</span>
+            <span>{ Math.round(props.props.humidity * 100) }%</span>
           </div>
           <div className='uv'>
             <span className='current-weather-bold'>UV: </span>

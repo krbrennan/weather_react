@@ -18,7 +18,8 @@ const Selector = (props) => {
     "clear": sunny,
     "partly-cloudy-day": partlyCloudy,
     "rain": rain,
-    "cloudy": cloud
+    "cloudy": cloud,
+    "clear-day": sunny
   }
 
   const NIGHTIMGS = {

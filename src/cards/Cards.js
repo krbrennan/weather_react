@@ -13,7 +13,7 @@ const Cards = (props) => {
     return(
       <TodayCard props={props.props} />
     )
-  } else { return "...Loading..."}
+  } else { return ""}
 }
 
 

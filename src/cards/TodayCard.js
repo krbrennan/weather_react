@@ -3,7 +3,8 @@ import './today_card.css';
 import IconSelector from '../icons/IconSelector'
 
 const Card = (props) => {
-
+console.log('top')
+console.log(props)
   /* <img className='weather-img' src={require('../icons/png/001-cloud.png')}></img> */
   // let currently = props.props.currently
   return(
