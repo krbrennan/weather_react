@@ -57,9 +57,14 @@
 .timeline-display-hours-span {
   width: 100%;
 }
+.timeline-display-hours-span:last-child {
+  border-right: 0px;
+}
 span.timeline-display-hours-span {
   border-right: .1px solid grey;
 }
+
+
 
 /* .timeline-display-hours-span:first-of-type {
   margin-left: 21px;

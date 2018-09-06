@@ -38,6 +38,10 @@
   border-right: .1px solid grey;
   padding: 0;
   max-width: 12%;
+  min-width: 9%;
+}
+.twelve-hr-timeline-display-hours-span:last-child {
+  border-right: 0px;
 }
 
 .twelve-timeline-hours {
