@@ -6,8 +6,6 @@ import TimelineHours from './TimelineHours'
 /* <Colors props = {props} /> */
 const Timeline = (props) => {
 
-  console.log('timeline')
-  // console.log(props)
     if(Object.values(props)[0] !== undefined) {
       // console.log(props.props.data)
       return (

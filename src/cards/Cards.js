@@ -5,9 +5,6 @@ import TodayCard from './TodayCard';
 
 const Cards = (props) => {
   // console.log(props)
-  // console.log(props.props.length)
-  console.log('anus')
-  // console.log(props)
 
   if(props.props.length === undefined) {
     return(
