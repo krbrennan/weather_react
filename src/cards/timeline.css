@@ -60,7 +60,6 @@
 .timeline-display-hours-span > span {
   max-width: .53%;
   min-width: .53%;
-  background: green;
 }
 .timeline-display-hours-span:last-child {
   border-right: 0px;
