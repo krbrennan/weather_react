@@ -5,8 +5,8 @@
 
 .twelve-timeline {
   padding: 2em;
-  max-width: 90%;
-  min-width: 90%;
+  min-width: 85vw;
+  margin: 0 auto;
 }
 
 .twelve-timeline-container {
@@ -52,6 +52,11 @@
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
 }
+
+#twelve-timeline > span:nth-child(1){
+  border-right: 5px solid grey;
+}
+
 .twelve-timeline-container span:last-child {
   border-right: 0px;
   border-top-right-radius: 14px;

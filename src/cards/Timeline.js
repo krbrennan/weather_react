@@ -3,7 +3,6 @@ import './timeline.css'
 import Colors from './Colors'
 import TimelineHours from './TimelineHours'
 
-/* <Colors props = {props} /> */
 const Timeline = (props) => {
 
     if(Object.values(props)[0] !== undefined) {

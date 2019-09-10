@@ -6,6 +6,7 @@ import './App.css';
 import CurrentWeatherData from './current_weather/CurrentWeatherData'
 import Timeline from './cards/Timeline'
 import TwelveHrTimeline from './cards/TwelveHrTimeline'
+import TwentyFourHourTimeline from './cards/TwentyFourHourTimeline'
 
 
 // import SearchBar from './SearchBar';
@@ -48,7 +49,7 @@ componentDidMount(){
 
 async componentDidUpdate(){
 
-
+  // this is for a future "search by city or zip" feature
       // if(this.state.searched === true){
       //   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.searchField},us&APPID=ac628c4c599f5392d529f22369c7f85f&units=imperial`);
       //   const json = await response.json();
@@ -80,10 +81,10 @@ async componentDidUpdate(){
     // successfully sets state.searchField to zip code
     // Because i went over API limit by accident I removed the searchBox's
     // relationship with retreiving data
-    this.setState({
-      searchField: data,
-      searched: true
-    });
+    // this.setState({
+    //   searchField: data,
+    //   searched: true
+    // });
 
   }
 
@@ -99,6 +100,7 @@ async componentDidUpdate(){
         {/* <SearchBar handlerFromParent={this.handler}/> */}
         <Cards props={this.state.darkSkyData} />
         <TwelveHrTimeline props={this.state.darkSkyData.hourly} />
+        <TwentyFourHourTimeline props={this.state.darkSkyData.hourly} />
         <Timeline props={this.state.darkSkyData.hourly} />
       </div>
     );

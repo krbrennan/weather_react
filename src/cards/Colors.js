@@ -36,7 +36,7 @@ let timeline = document.getElementById('timeline')
 if(timeline !== undefined && colors.length >= 24){
   return(
       colors.map((color) => {
-        return <span style={{backgroundColor: color}}></span>
+        return <span className="color-box" style={{backgroundColor: color}}></span>
       })
   )
 } else{

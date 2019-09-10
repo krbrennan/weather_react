@@ -1,0 +1,25 @@
+.twenty-four-timeline{
+  min-width: 480px;
+  height: 7em;
+  margin: 4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.twenty-four-span {
+  border:2px solid grey;
+  padding: 1em;
+  display: flex;
+  min-width: 20px;
+}
+
+span.twenty-four-span:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+span.twenty-four-span:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
