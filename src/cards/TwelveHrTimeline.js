@@ -3,8 +3,7 @@ import TwelveHrColors from './TwelveHrColors'
 import TwelveHrTimelineDisplay from './TwelveHrTimelineDisplay'
 
 const TwelveHrTimeline = (props) => {
-
-    if(Object.values(props)[0] !== undefined) {
+    if(props.props !== undefined){
       return(
         <div className='twelve-timeline'>
           <h2>12 Hour Forecast</h2>

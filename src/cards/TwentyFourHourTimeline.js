@@ -1,5 +1,6 @@
 import React from 'react'
 // import TwentyFourHourColors from './TwentyFourHourColors.js'
+import Colors from './Colors.js'
 import './twentyFourHourTimeline.css'
 
 const TwentyFourHourTimeline = (props) => {
@@ -7,8 +8,12 @@ const TwentyFourHourTimeline = (props) => {
 
   if(Object.values(props)[0] !== undefined) {
     return(
-      <div>
-        <span>hola</span>
+      <div className='timeline'>
+        <h2>24 Hour Forecast</h2>
+        <div id='timeline' className='timeline-container'>
+          <Colors props={props} />
+        </div>
+      
       </div>
     )
   } else {

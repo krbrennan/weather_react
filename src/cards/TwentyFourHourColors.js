@@ -5,10 +5,10 @@ const TwentyFourHourColors = (props) => {
   let colors = []
   let numHours = 0
 
-  if(props.props !== undefined){
+  if(props.props.props !== undefined){
     // console.log(props.props.data)
     if(numHours < 24){
-      props.props.data.map(hour => {
+      props.props.props.map(hour => {
         switch(hour.icon){
           case "cloudy":
           colors.push('#636e72')

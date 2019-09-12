@@ -17,6 +17,9 @@ class App extends Component {
     this.state = {
       data: [],
       darkSkyData: [],
+      twelveHourData: [],
+      twentyFourHourData: [],
+      fourtyEightHourData: [],
       searchField: '',
       lat: 0,
       long: 0,
@@ -24,6 +27,7 @@ class App extends Component {
       calls: 0
     };
     this.handler = this.handler.bind(this)
+
     // this.getCoords = this.getCoords.bind(this)
   }
 
@@ -62,14 +66,28 @@ async componentDidUpdate(){
       //   this.setState({searched: false})
       // }
 
+      // async function setData(jsonBlob){
+      //     // console.log(jsonBlob.hourly.data.slice(0,48))
+      //     this.setState({
+      //       twelveHrData: jsonBlob.data.slice(0,12),
+      //       twentyFourHourData: jsonBlob.data.slice(0,24),
+      //       fourtyEightHourData: jsonBlob.data.slice(0,48)
+      //     });
+      // }
+
+
     //checks to make sure only one api call is made
     if(this.state.lat !== 0 && this.state.searched === true){
       const proxy = `https://mighty-savannah-21809.herokuapp.com/`
       const url = `https://api.darksky.net/forecast/3c36360a47f4cc747e19871230e1ecd8/${this.state.lat},${this.state.long}`
       const darkResponse = await fetch(proxy + url)
       const darkJson = await darkResponse.json()
+      // console.log(darkJson.hourly.data)
       this.setState({
         darkSkyData: darkJson,
+        twelveHourData: darkJson.hourly.data.slice(0,12),
+        twentyFourHourData: darkJson.hourly.data.slice(0,24),
+        fourtyEightHourData: darkJson.hourly.data.slice(0,48),
         searched: false,
         calls: this.state.calls += 1
       });
@@ -99,9 +117,9 @@ async componentDidUpdate(){
         <CurrentWeatherData props={this.state.darkSkyData.currently} />
         {/* <SearchBar handlerFromParent={this.handler}/> */}
         <Cards props={this.state.darkSkyData} />
-        <TwelveHrTimeline props={this.state.darkSkyData.hourly} />
-        <TwentyFourHourTimeline props={this.state.darkSkyData.hourly} />
-        <Timeline props={this.state.darkSkyData.hourly} />
+        <TwelveHrTimeline props={this.state.twelveHourData} />
+        <TwentyFourHourTimeline props={this.state.twentyFourHourData} />
+        <Timeline props={this.state.fourtyEightHourData} />
       </div>
     );
   }

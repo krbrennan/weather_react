@@ -2,12 +2,12 @@ import React from 'react'
 import './twelve-hr-timeline.css'
 
 const TwelveHrColors = (props) => {
-
+console.log(props.props.props)
   let colors = []
 
-  if(props.props.props.data[0] !== undefined) {
+  if(props.props.props !== undefined) {
     let numHours = 0
-      props.props.props.data.map(hour => {
+      props.props.props.map(hour => {
         if(numHours < 12) {
           if(hour.icon === 'cloudy'){
             colors.push('#636e72')

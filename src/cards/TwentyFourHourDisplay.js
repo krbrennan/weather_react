@@ -1,7 +1,7 @@
 import React from 'react'
-import './twelve-hr-timeline.css'
+import './twentyFourtHourTimeline.css'
 
-const TwelveHrTimelineDisplay = (props) => {
+const TwentyFourHourTimelineDisplay = (props) => {
 
     let hours = []
     let skipHours = 0
@@ -10,7 +10,7 @@ const TwelveHrTimelineDisplay = (props) => {
       props.props.props.map((hour) => {
         // to stop pulling from props once skipHours exceeds length of arry
         // hours.push(props.props.props.data)
-        if(skipHours < 12) {
+        if(skipHours < 24) {
           // hours.push(hour.time)
           hours.push(props.props.props[skipHours].time)
           skipHours++
@@ -22,7 +22,7 @@ const TwelveHrTimelineDisplay = (props) => {
     }
     // console.log(props.props.props.data)
     return(
-      <div className='twelve-hr-timeline-display-hours'>
+      <div className='twenty-four-hour-timeline-display'>
         {hours.map(hour => {
           const time = new Date(hour * 1000).getHours();
           let amPm = time > 12 ? 'pm' : 'am'
@@ -36,4 +36,4 @@ const TwelveHrTimelineDisplay = (props) => {
     )
 }
 
-export default TwelveHrTimelineDisplay
+export default TwentyFourHourTimelineDisplay
