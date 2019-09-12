@@ -25,10 +25,24 @@ const TimelineHours = (props) => {
       {hours.map((hour, index) => {
         const time = new Date(hour * 1000).getHours();
         let amPm = time > 12 ? 'pm' : 'am'
-        let future = (time + 4) % 12
+        let future = 0
+        let currentHour = 0
+
+        if(time == 0){
+          currentHour = 12
+        } else if(time > 12){
+          currentHour = time - 12
+        } else {
+          currentHour = time
+        }
+
+        if((time+3) % 12 == 0){
+          future = 12
+        } else { future = (time + 3) % 12 }
+
         const futureAmPm = (time + 4) > 12 ? 'pm' : 'am'
         return <span id={'span'+index} className='timeline-display-hours-span'>
-          {time > 12 ? time - 12 : time}  {amPm}  <br />--
+          {currentHour}  {amPm}  <br />--
           <br /> {future}  {futureAmPm}
         </span>
       })}
