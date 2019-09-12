@@ -159,6 +159,26 @@
   }
   .twenty-four-hour-timeline-display > #span24-0{
     text-align: left;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin:0;
+  }
+}
+
+@media (max-width:600px){
+  .twenty-four-hour-timeline-display > span{
+    font-size: 8px;
+  }
+
+  .twenty-four-hour-timeline-display > span{
+    font-size: 8px;
+  }
+  #timeline-24 > span:nth-child(4n) {
+    height: 8em;
+  }
+  #timeline-24 > span:last-child {
+    height: 100%;
+  }
+  .twenty-four-hour-timeline-display > #span24-2{
+    margin-left: 1.5em;
   }
 }
