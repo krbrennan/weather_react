@@ -36,7 +36,7 @@ console.log(props.props.props)
 
     let timeline = document.getElementById('twelve-timeline')
 
-    if(timeline !== undefined && colors.length < 13){
+    if(timeline !== undefined){
       return(
           colors.map((color) => {
             return <span style={{backgroundColor: color, width: '66.4px'}}></span>

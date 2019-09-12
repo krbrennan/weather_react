@@ -7,7 +7,6 @@ const TwentyFourHourColors = (props) => {
 
   if(props.props.props !== undefined){
     // console.log(props.props.data)
-    if(numHours < 24){
       props.props.props.map(hour => {
         switch(hour.icon){
           case "cloudy":
@@ -36,7 +35,20 @@ const TwentyFourHourColors = (props) => {
           break
         }
       });
-    }
+  }
+
+  let timeline = document.getElementById('twentyfour-hour-timeline')
+
+  if(timeline !== undefined){
+    return(
+        colors.map((color) => {
+          return <span style={{backgroundColor: color, width: '66.4px'}}></span>
+        })
+    )
+  } else{
+    return(
+      <h3></h3>
+    )
   }
 
 

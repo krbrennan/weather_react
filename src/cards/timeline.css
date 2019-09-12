@@ -4,14 +4,14 @@
 }
 
 .timeline {
-  max-width: 85vw;
+  max-width: 90vw;
   margin: 0 auto;
   margin-bottom: 8em;
 }
 
 .timeline-container {
   justify-content: center;
-  max-width: 85vw;
+  max-width: 90vw;
   margin: 0 auto;
   margin-top: 2em;
   height: 5em;

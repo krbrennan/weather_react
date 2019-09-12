@@ -1,5 +1,5 @@
 import React from 'react'
-import './twentyFourtHourTimeline.css'
+import './twentyFourHourTimeline.css'
 
 const TwentyFourHourTimelineDisplay = (props) => {
 
@@ -13,7 +13,7 @@ const TwentyFourHourTimelineDisplay = (props) => {
         if(skipHours < 24) {
           // hours.push(hour.time)
           hours.push(props.props.props[skipHours].time)
-          skipHours++
+          skipHours+=3
         } else {return}
       })
       // console.log('timelineHours')
@@ -26,10 +26,11 @@ const TwentyFourHourTimelineDisplay = (props) => {
         {hours.map(hour => {
           const time = new Date(hour * 1000).getHours();
           let amPm = time > 12 ? 'pm' : 'am'
-          let future = (time + 4) % 12
+          let future = (time + 3) % 12
           const futureAmPm = (time + 4) > 12 ? 'pm' : 'am'
-          return <span className='twelve-hr-timeline-display-hours-span'>
-            {time > 12 ? time - 12 : time}:00 <br /> {amPm}
+          return <span className='twenty-four-hr-timeline-display-hours-span'>
+            {time > 12 ? time - 12 : time} {amPm} <br /> -- <br />
+            { future } { futureAmPm }
           </span>
         })}
       </div>
