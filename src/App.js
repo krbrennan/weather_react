@@ -79,7 +79,7 @@ async componentDidUpdate(){
     //checks to make sure only one api call is made
     if(this.state.lat !== 0 && this.state.searched === true){
       const proxy = `https://mighty-savannah-21809.herokuapp.com/`
-      const url = `https://api.darksky.net/forecast/3c36360a47f4cc747e19871230e1ecd8/${this.state.lat},${this.state.long}`
+      const url = `https://api.darksky.net/forecast/3c36360a47f4cc747e19871230e1ecd8/${this.state.lat},${this.state.long}/?exclude=minutely,flags`
       const darkResponse = await fetch(proxy + url)
       const darkJson = await darkResponse.json()
       // console.log(darkJson.hourly.data)
