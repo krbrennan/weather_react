@@ -147,12 +147,21 @@
     font-size: 8px;
   }
   #timeline-24 > span:nth-child(4n) {
-    height: 8em;
+    height: 7.25em;
   }
   #timeline-24 > span:last-child {
     height: 100%;
   }
   .twenty-four-hour-timeline-display > #span24-2{
     margin-left: 1.5em;
+  }
+}
+
+@media (max-width: 300px){
+  .twenty-four-hour-timeline-display > span {
+    font-size: 5px;
+  }
+  .twenty-four-hour-timeline-display > #span24-2 {
+    margin-left: 4%;
   }
 }
