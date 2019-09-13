@@ -90,7 +90,7 @@
 }
 
 .color-box:nth-child(5n){
-  border-right: 4px solid black;
+  border-right: 2px solid black;
   height: 9em;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;

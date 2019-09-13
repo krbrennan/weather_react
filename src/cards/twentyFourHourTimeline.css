@@ -19,7 +19,7 @@
   border-right: 0 !important;
 }
 #timeline-24 > span:nth-child(4n) {
-  border-right: 5px solid black;
+  border-right: 2px solid black;
   height: 9em;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
