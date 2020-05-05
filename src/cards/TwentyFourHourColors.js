@@ -17,6 +17,8 @@ console.log(props)
             colors.push('#D3D3D3')
             ++numHours
             break
+          case 'Possible Drizzle':
+            colors.push('#87CEEB')
           case 'Rain':
             colors.push('#0652DD')
             ++numHours
