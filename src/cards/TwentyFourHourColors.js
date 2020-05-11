@@ -13,6 +13,10 @@ console.log(props)
             colors.push('#A9A9A9')
             ++numHours
             break
+          case "Clear":
+            colors.push('#FFC312')
+            ++numHours
+            break
           case 'Partly Cloudy':
             colors.push('#D3D3D3')
             ++numHours
